@@ -15,9 +15,6 @@ public class MainAdapter extends RecyclerView.Adapter<MainViewHolder> {
 
     public MainAdapter() {
         data = new ArrayList<>();
-        /*for(int i = 0; i <=1000; i++) {
-            data.add("Element # " + i);
-        }*/
     }
 
     public void addText(String text) {

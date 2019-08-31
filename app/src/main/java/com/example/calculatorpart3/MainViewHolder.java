@@ -12,7 +12,6 @@ public class MainViewHolder extends RecyclerView.ViewHolder {
 
     public MainViewHolder(@NonNull View itemView) {
         super(itemView);
-
         textView = itemView.findViewById(R.id.vh_text_view);
     }
 
