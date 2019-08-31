@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CalculatorPart3</string>
+    <string name="num1">Первое число</string>
+    <string name="num2">Второе число</string>
+    <string name="add">+</string>
+    <string name="sub">-</string>
+    <string name="multi">*</string>
+    <string name="divide">/</string>
+    <string name="result">Результат</string>
+    <string name="add_task">Add</string>
+    <string name="save">Save</string>
+</resources>
