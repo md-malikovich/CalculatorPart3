@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +22,7 @@ public class CalculatorActivity extends AppCompatActivity {
     Button btnAdd, btnSub, btnMulti, btnDiv, btnSave;
 
     public String resultText;
-    String oper = "";
+    String operator = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,28 +49,28 @@ public class CalculatorActivity extends AppCompatActivity {
                 switch (view.getId()) {
 
                     case R.id.btn_add:
-                        oper = "+";
+                        operator = "+";
                         result = firstNum + secondNum;
                         c_text_view.setText(Double.toString(result));
                         Log.d("ololo", "+");
                         break;
 
                     case R.id.btn_sub:
-                        oper = "-";
+                        operator = "-";
                         result = firstNum - secondNum;
                         c_text_view.setText(Double.toString(result));
                         Log.d("ololo", "-");
                         break;
 
                     case R.id.btn_multi:
-                        oper = "*";
+                        operator = "*";
                         result = firstNum * secondNum;
                         c_text_view.setText(Double.toString(result));
                         Log.d("ololo", "*");
                         break;
 
                     case R.id.btn_div:
-                        oper = "/";
+                        operator = "/";
                         result = firstNum / secondNum;
                         c_text_view.setText(Double.toString(result));
                         Log.d("ololo", "/");
@@ -79,7 +78,7 @@ public class CalculatorActivity extends AppCompatActivity {
 
                     case R.id.btn_save:
                         Intent intent = new Intent();
-                        c_text_view.setText(firstNum + " " + oper + " " + secondNum + " = " + result);
+                        c_text_view.setText(firstNum + " " + operator + " " + secondNum + " = " + result);
                         resultText = c_text_view.getText().toString();
                         intent.putExtra(NEW_TEXT_KEY, resultText);
                         setResult(RESULT_OK, intent);
